@@ -19,30 +19,7 @@ internal class TitleScreenHandler
                 Console.WriteLine(CenterText("Please select a save:"));
                 Console.WriteLine();
 
-                if (File.Exists("..\\..\\..\\saveFiles\\SaveFile1.txt"))
-                {
-                    Console.WriteLine(CenterText("1) Load Saved Game"));
-                }
-                else
-                {
-                    Console.WriteLine(CenterText("1) Start New Game"));
-                }
-                if (File.Exists("..\\..\\..\\saveFiles\\SaveFile2.txt"))
-                {
-                    Console.WriteLine(CenterText("2) Load Saved Game"));
-                }
-                else
-                {
-                    Console.WriteLine(CenterText("2) Start New Game"));
-                }
-                if (File.Exists("..\\..\\..\\saveFiles\\SaveFile3.txt"))
-                {
-                    Console.WriteLine(CenterText("3) Load Saved Game"));
-                }
-                else
-                {
-                    Console.WriteLine(CenterText("3) Start New Game"));
-                }
+                new FileSelection().FileSelect();
 
                 Console.WriteLine();
                 Console.WriteLine(CenterText("-------------------------"));
